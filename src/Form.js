@@ -1,21 +1,29 @@
-import React from 'react'
-import ReactDOM from 'react-dom';
-import Countdown from 'react-countdown';
+import React from 'react';
 
-
-function App() {
-  return(
+function Form() {
+  return (
+    <>
     <div className='bg-light'>
-    <form className="row g-3 ">
+    <form className="row g-3">
   <div className="col-md-6">
     <label for="inputEmail4" className="form-label">Email</label>
     <input type="email" className="form-control" id="inputEmail4"/>
   </div>
   <div className="col-md-6">
+    <label for="inputPassword4" className="form-label">Password</label>
+    <input type="password" className="form-control" id="inputPassword4"/>
+  </div>
+  <div className="col-12">
+    <label for="inputAddress" className="form-label">Address</label>
+    <input type="text" className="form-control" id="inputAddress" placeholder="1234 Main St"/>
+  </div>
+  <div className="col-12">
+    <label for="inputAddress2" className="form-label">Address 2</label>
+    <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"/>
+  </div>
+  <div className="col-md-6">
     <label for="inputCity" className="form-label">City</label>
     <input type="text" className="form-control" id="inputCity"/>
-  </div>
-  <div>
   </div>
   <div className="col-md-4">
     <label for="inputState" className="form-label">State</label>
@@ -41,11 +49,8 @@ function App() {
   </div>
 </form>
     </div>
+    </>
   );
-}
-ReactDOM.render(
-<Countdown className="p-15" date={Date.now() + 1000000} />,
-  document.getElementById('root')
-);
+};
 
-export default App
+export default Form;
